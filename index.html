@@ -4,8 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+  
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&display=swap"
       rel="stylesheet"
@@ -23,22 +28,45 @@
         <title>Document</title>
       </head>
       <body>
+        
+
         <header>
           <a href="#">
             <img class="logo" alt="funclub logo" src="logo.png" />
           </a>
           <!-- <p class="slogan">Play Your Passion, Join the Fun!</p> -->
         </header>
-        <button type="button" class="AddClub">Add the club</button>
-        <div class="clubdata hidden">
-          <input type="text" value="name" class="ClubName" />
-          <input type="text" value="sports" class="Sports" />
-          <input type="text" value="location" class="Location" />
-          <input type="email" value="email" class="Email" />
+        <button class="getClub">get club</button>
+        <button class="getPlayer">player</button>
 
-          <button type="button" class="Submit">Submit</button>
-          <input type="text" value="sports" class="getsports" />
-          <button type="button" class="SearchClub">Search Club</button>
+        <div class="part1">
+            <button type="button" class="AddClub">Add the club</button>
+        
+            <div class="clubdata hidden">
+              <input type="text" value="name" class="ClubName" />
+              <input type="text" value="sports" class="Sports" />
+              <input type="text" value="location" class="Location" />
+              <input type="email" value="email" class="Email" />
+
+              <button type="button" class="Submit">Submit</button>
+            </div>
+            <input type="text" value="sports" class="getsports" />
+            <button type="button" class="SearchClub">Search Club</button>
+          </div>
+        </div>
+        <div class="part2 hidden1">
+          <form id="formPlayer">
+            <input type="text" class="sport" id="sport" placeholder="Enter sport" />
+            <!-- <input
+              type="text"
+              class="location"
+              id="location"
+              placeholder="Enter location"
+            /> -->
+            <button type="submit">Search</button>
+            <button name="clear" type="reset">Clear</button>
+          </form>
+          <div id="list"></div>
         </div>
       </body>
     </html>
