@@ -10,6 +10,8 @@
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&display=swap"
       rel="stylesheet"
     />
+    <script src="script.js" defer></script>
+
     <title>Social site</title>
   </head>
   <body>
@@ -27,8 +29,18 @@
           </a>
           <!-- <p class="slogan">Play Your Passion, Join the Fun!</p> -->
         </header>
+        <button type="button" class="AddClub">Add the club</button>
+        <div class="clubdata hidden">
+          <input type="text" value="name" class="ClubName" />
+          <input type="text" value="sports" class="Sports" />
+          <input type="text" value="location" class="Location" />
+          <input type="email" value="email" class="Email" />
+
+          <button type="button" class="Submit">Submit</button>
+          <input type="text" value="sports" class="getsports" />
+          <button type="button" class="SearchClub">Search Club</button>
+        </div>
       </body>
     </html>
   </body>
-  <script src="script.js" defer></script>
 </html>
