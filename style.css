@@ -90,6 +90,12 @@ header .logo {
   margin-bottom: 2rem;
 }
 
+.hidden1 {
+  display: none;
+}
+.hidden {
+  display: none;
+}
 #list {
   margin: 4rem;
   font-size: 14px;
