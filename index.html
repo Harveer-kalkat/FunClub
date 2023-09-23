@@ -4,13 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <<<<<<< HEAD
+
     <link rel="preconnect" href="https://fonts.googleapis.com/" />
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
-    =======
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    >>>>>>> dcdd5d2d6f06ea517c409dbd550b949bea65f99e
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&display=swap"
       rel="stylesheet"
@@ -18,29 +16,26 @@
     <title>Social site</title>
   </head>
   <body>
-    <!DOCTYPE html>
-    <html lang="en">
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-      </head>
-      <body>
-        FunClub
-
-        <header>
-          <a href="#">
-            <img class="logo" alt="funclub logo" src="logo.png" />
-          </a>
-          <!-- <p class="slogan">Play Your Passion, Join the Fun!</p> -->
-        </header>
-        <form>
-          <input type="text" id="sport" placeholder="Enter sport" />
-          <input type="text" id="location" placeholder="Enter location" />
-          <button type="submit">Search</button>
-        </form>
-      </body>
-    </html>
+    <div id="root">
+      <header>
+        <a href="#">
+          <img class="logo" alt="funclub logo" src="logo.png" />
+        </a>
+        <!-- <p class="slogan">Play Your Passion, Join the Fun!</p> -->
+      </header>
+      <form id="formPlayer">
+        <input type="text" class="sport" id="sport" placeholder="Enter sport" />
+        <input
+          type="text"
+          class="location"
+          id="location"
+          placeholder="Enter location"
+        />
+        <button type="submit">Search</button>
+        <button name="clear" type="reset">Clear</button>
+      </form>
+      <div id="list"></div>
+    </div>
   </body>
   <script src="script.js" defer></script>
 </html>
