@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-  
+
     <link rel="preconnect" href="https://fonts.googleapis.com/" />
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
-  
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
@@ -28,35 +28,44 @@
         <title>Document</title>
       </head>
       <body>
-        
-
         <header>
           <a href="#">
             <img class="logo" alt="funclub logo" src="logo.png" />
           </a>
           <!-- <p class="slogan">Play Your Passion, Join the Fun!</p> -->
         </header>
-        <button class="getClub">get club</button>
-        <button class="getPlayer">player</button>
+        <div id="buttons">
+          <button class="getClub">Get club</button>
+          <button class="getPlayer">Players</button>
+        </div>
 
-        <div class="part1">
-            <button type="button" class="AddClub">Add the club</button>
-        
-            <div class="clubdata hidden">
-              <input type="text" value="name" class="ClubName" />
-              <input type="text" value="sports" class="Sports" />
-              <input type="text" value="location" class="Location" />
-              <input type="email" value="email" class="Email" />
+        <div class="part1 hidden1">
+          <button type="button" class="AddClub">Add the club</button>
 
-              <button type="button" class="Submit">Submit</button>
-            </div>
-            <input type="text" value="sports" class="getsports" />
+          <div class="clubdata hidden">
+            <input type="text" placeholder="name" class="ClubName" />
+            <input type="text" placeholder="sports" class="Sports" />
+            <input type="text" placeholder="location" class="Location" />
+            <input type="email" placeholder="email" class="Email" />
+
+            <button type="button" class="Submit">Submit</button>
+          </div>
+          <div id="searchClub">
+            <input type="text" placeholder="sports" class="getsports" />
+
             <button type="button" class="SearchClub">Search Club</button>
           </div>
+          <div id="list1"></div>
         </div>
+
         <div class="part2 hidden1">
           <form id="formPlayer">
-            <input type="text" class="sport" id="sport" placeholder="Enter sport" />
+            <input
+              type="text"
+              class="sport"
+              id="sport"
+              placeholder="Enter sport"
+            />
             <!-- <input
               type="text"
               class="location"
@@ -70,5 +79,29 @@
         </div>
       </body>
     </html>
+    <!-- <footer>
+      <div class="footer">
+        <div class="row">
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-instagram"></i></a>
+          <a href="#"><i class="fa fa-youtube"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+        </div>
+
+        <div class="row">
+          <ul>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">Our Services</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Career</a></li>
+          </ul>
+        </div>
+
+        <div class="row">
+          FunClub Copyright © 2023 FunClub - All rights reserved
+        </div>
+      </div>
+    </footer> -->
   </body>
 </html>

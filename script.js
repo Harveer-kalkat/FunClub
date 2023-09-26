@@ -3,26 +3,28 @@ let addClub = document.querySelector(".AddClub");
 let searchClub = document.querySelector(".SearchClub");
 
 // Check if data is already stored in localStorage and initialize ClubData accordingly
-let ClubData = JSON.parse(localStorage.getItem("ClubData")) || [
-  {
-    Name: "Vancover Tennis Club",
-    Sports: "Tennis",
-    location: "Vancouver",
-    Email: "vantennisclub@gmail.com",
-  },
-  {
-    Name: "Boys Volleyball",
-    Sports: "Volleyball",
-    location: "Vancouver",
-    Email: "ballboys@gmail.com",
-  },
-  {
-    Name: "Soccer club",
-    Sports: "Soccer",
-    location: "Vancouver",
-    Email: "menssoccer@gmail.com",
-  },
-];
+let ClubData =
+  JSON.parse(localStorage.getItem("ClubData")) ||
+  [
+    // {
+    //   Name: "Vancover Tennis Club",
+    //   Sports: "Tennis",
+    //   location: "Vancouver",
+    //   Email: "vantennisclub@gmail.com",
+    // },
+    // {
+    //   Name: "Boys Volleyball",
+    //   Sports: "Volleyball",
+    //   location: "Vancouver",
+    //   Email: "ballboys@gmail.com",
+    // },
+    // {
+    //   Name: "Soccer club",
+    //   Sports: "Soccer",
+    //   location: "Vancouver",
+    //   Email: "menssoccer@gmail.com",
+    // },
+  ];
 
 // Function to save the ClubData array to localStorage
 function saveDataToLocalStorage() {
@@ -49,32 +51,41 @@ submit.addEventListener("click", function () {
 
 searchClub.addEventListener("click", function () {
   const clubdata = document.querySelector(".clubdata");
-  const message = document.createElement("div");
-  // const show = document.querySelector(".getsports").value;
-  // const showData = capitalizeWord(show);
+  const show = document.querySelector(".getsports").value;
+  const showData = capitalizeWord(show);
 
-  message.classList.add("show-data");
+  var message = document.getElementById("list1");
 
-  message.innerHTML =
-    "<ul>" +
+  messageString =
+    `<ul class="responsive-table">` +
+    `<li class="table-header">` +
+    `<div class="col col-1">Name</div>` +
+    `<div class="col col-2">Email</div>` +
+    `<div class="col col-3">Sport</div>` +
+    `<div class="col col-4">Location</div>` +
+    `</li>` +
     ClubData.filter(function (clubdata) {
       console.log(clubdata);
       return showData === clubdata.Sports;
     })
       .map(function (clubdata) {
         return (
-          "<li>" +
-          "<strong>Title:Name </strong>" +
+          `<li class="table-row">` +
+          `<div class="col col-1" data-label="Job Id"> ` +
           clubdata.Name +
+          `</div>` +
           "<br/>" +
-          "<strong>email: </strong>" +
+          `<div class="col col-2" data-label="Job Id"> ` +
           clubdata.email +
+          `</div>` +
           "<br/>" +
-          "<strong>Sports: </strong>" +
+          `<div class="col col-3" data-label="Job Id"> ` +
           clubdata.Sports +
+          `</div>` +
           "<br/>" +
-          "<strong>Location: </strong>" +
+          `<div class="col col-4" data-label="Job Id"> ` +
           clubdata.location +
+          `</div>` +
           "<br/>" +
           "</li>"
         );
@@ -82,7 +93,7 @@ searchClub.addEventListener("click", function () {
       .join("") +
     "</ul>";
 
-  clubdata.append(message);
+  message.innerHTML = messageString;
 });
 
 function capitalizeWord(word) {
